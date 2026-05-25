@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<title>Professional Report</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="pdf-body">
+
+<div class="pdf-page" id="pdfpage1">
+
+    <!-- HEADER -->
+
+    <div class="pdf-header">
+
+        <img src="assets/image.svg" class="pdf-logo">
+
+        <div class="pdf-company">
+
+            <h1>EARTH RESISTANCE TEST REPORT</h1>
+
+            <p>Fall of Potential Method</p>
+
+            <p>Hydroplan Group</p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Project Information
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Project Name</th>
+                <td id="pdfProjectName"></td>
+            </tr>
+
+            <tr>
+                <th>Project Reference</th>
+                <td id="pdfProjectReference"></td>
+            </tr>
+
+            <tr>
+                <th>Location</th>
+                <td id="pdfLocation"></td>
+            </tr>
+
+            <tr>
+                <th>Engineer</th>
+                <td id="pdfEngineer"></td>
+            </tr>
+
+            <tr>
+                <th>Weather</th>
+                <td id="pdfWeather"></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- INSTRUMENT -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Instrument Details
+        </div>
+
+        <table id="pdfInstrumentTable"></table>
+
+    </div>
+
+    <!-- OBSERVATION -->
+
+    <div class="pdf-section page-break-inside">
+
+        <div class="pdf-section-title">
+            Observation Table
+        </div>
+
+        <table id="pdfObservationTable"></table>
+
+    </div>
+
+    <!-- RESULTS -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Calculated Results
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Average Resistance</th>
+                <td id="pdfAvg"></td>
+            </tr>
+
+            <tr>
+                <th>62% Distance</th>
+                <td id="pdfDistance"></td>
+            </tr>
+
+            <tr>
+                <th>Equivalent Resistance</th>
+                <td id="pdfEquivalent"></td>
+            </tr>
+
+            <tr>
+                <th>Maximum Deviation</th>
+                <td id="pdfDeviation"></td>
+            </tr>
+
+            <tr>
+                <th>Status</th>
+                <td id="pdfStatus"></td>
+            </tr>
+
+        </table>
+
+    </div>
+    </div>
+
+    <div class="pdf-page page-break" id="pdfPage2">
+    <!-- CHART -->
+
+    <div class="pdf-section page-break">
+
+        <div class="pdf-section-title">
+            Resistance Curve
+        </div>
+
+        <img id="pdfChartImage" class="pdf-chart">
+
+    </div>
+
+    <!-- MAP -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Site Location
+        </div>
+
+        <iframe
+        id="pdfMap"
+        class="pdf-map">
+        </iframe>
+
+    </div>
+
+    <!-- PHOTOS -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Site Photographs
+        </div>
+
+        <div class="pdf-photo-grid">
+
+            <div>
+
+                <img id="pdfImg1">
+
+                <p id="pdfDesc1"></p>
+
+            </div>
+
+            <div>
+
+                <img id="pdfImg2">
+
+                <p id="pdfDesc2"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- REMARKS -->
+
+    <div class="pdf-section">
+
+        <div class="pdf-section-title">
+            Engineer Remarks
+        </div>
+
+        <p id="pdfRemarks"></p>
+
+    </div>
+
+    <!-- SIGNATURES -->
+
+    <div class="pdf-signatures">
+
+        <div class="sign-box">
+
+            <div class="sign-line"></div>
+
+            Prepared By
+
+        </div>
+
+        <div class="sign-box">
+
+            <div class="sign-line"></div>
+
+            Checked By
+
+        </div>
+
+        <div class="sign-box">
+
+            <div class="sign-line"></div>
+
+            Approved By
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
